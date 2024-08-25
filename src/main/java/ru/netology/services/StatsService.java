@@ -3,33 +3,53 @@ package ru.netology.services;
 public class StatsService {
 
     public int sumOfAllSales(int[] monthSales) {
-        //TODO
-        return 0;
+        int sum = 0;
+        for (int monthSale : monthSales) {
+            sum += monthSale;
+        }
+        return sum;
     }
 
-    public int avgOfSumSalesInMonth(int[] monthSales) {
-        //TODO
-        return 0;
+    public double avgOfSumSalesInMonth(int[] monthSales) {
+        return (double) sumOfAllSales(monthSales) / monthSales.length;
     }
 
     public int numberMonthOfMaxSales(int[] monthSales) {
-        //TODO
-        return 0;
+        int numberMax = 0;
+        for (int i = 0; i < monthSales.length; i++) {
+            if (monthSales[i] >= monthSales[numberMax]) {
+                numberMax = i;
+            }
+        }
+        return numberMax + 1;
     }
 
     public int numberMonthOfMinSales(int[] monthSales) {
-        //TODO
-        return 0;
+        int numberMin = 0;
+        for (int i = 0; i < monthSales.length; i++) {
+            if (monthSales[i] <= monthSales[numberMin]) {
+                numberMin = i;
+            }
+        }
+        return numberMin + 1;
     }
 
     public int countMonthInWhichSalesWasBelowAverage(int[] monthSales) {
-        //TODO
-        return 0;
+        int count = 0;
+        double avg = avgOfSumSalesInMonth(monthSales);
+        for (int monthSale : monthSales) {
+            if (monthSale < avg) { count++; }
+        }
+        return count;
     }
 
     public int countMonthInWhichSalesWasAboveAverage(int[] monthSales) {
-        //TODO
-        return 0;
+        int count = 0;
+        double avg = avgOfSumSalesInMonth(monthSales);
+        for (int monthSale : monthSales) {
+            if (monthSale > avg) { count++; }
+        }
+        return count;
     }
 
 }

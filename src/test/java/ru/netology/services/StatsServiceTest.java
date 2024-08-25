@@ -13,7 +13,7 @@ class StatsServiceTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
-        double actual = service.sumOfAllSales(sales);
+        int actual = service.sumOfAllSales(sales);
 
         //Then
         int expected = 180;
@@ -30,7 +30,7 @@ class StatsServiceTest {
         double actual = service.avgOfSumSalesInMonth(sales);
 
         //Then
-        int expected = 15;
+        double expected = 15;
         assertEquals(expected, actual);
     }
 
@@ -41,7 +41,7 @@ class StatsServiceTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
-        double actual = service.numberMonthOfMaxSales(sales);
+        int actual = service.numberMonthOfMaxSales(sales);
 
         //Then
         int expected = 8;
@@ -55,7 +55,7 @@ class StatsServiceTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
-        double actual = service.numberMonthOfMinSales(sales);
+        int actual = service.numberMonthOfMinSales(sales);
 
         //Then
         int expected = 9;
@@ -69,7 +69,7 @@ class StatsServiceTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
-        double actual = service.countMonthInWhichSalesWasBelowAverage(sales);
+        int actual = service.countMonthInWhichSalesWasBelowAverage(sales);
 
         //Then
         int expected = 5;
@@ -83,7 +83,7 @@ class StatsServiceTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
-        double actual = service.countMonthInWhichSalesWasAboveAverage(sales);
+        int actual = service.countMonthInWhichSalesWasAboveAverage(sales);
 
         //Then
         int expected = 5;
