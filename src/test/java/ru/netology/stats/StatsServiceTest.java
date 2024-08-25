@@ -10,13 +10,13 @@ class StatsServiceTest {
     void sumOfAllSalesTest() {
         //Given
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
-        int actual = service.sumOfAllSales(sales);
+        long actual = service.sumOfAllSales(sales);
 
         //Then
-        int expected = 180;
+        long expected = 180;
         assertEquals(expected, actual);
     }
 
@@ -24,7 +24,7 @@ class StatsServiceTest {
     void avgOfSumSalesInMonthTest() {
         //Given
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
         double actual = service.avgOfSumSalesInMonth(sales);
@@ -38,7 +38,7 @@ class StatsServiceTest {
     void numberMonthOfMaxSalesTest() {
         //Given
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
         int actual = service.numberMonthOfMaxSales(sales);
@@ -52,7 +52,7 @@ class StatsServiceTest {
     void numberMonthOfMinSalesTest() {
         //Given
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
         int actual = service.numberMonthOfMinSales(sales);
@@ -66,7 +66,7 @@ class StatsServiceTest {
     void countMonthInWhichSalesWasBelowAverageTest() {
         //Given
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
         int actual = service.countMonthInWhichSalesWasBelowAverage(sales);
@@ -80,7 +80,7 @@ class StatsServiceTest {
     void countMonthInWhichSalesWasAboveAverageTest() {
         //Given
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         //When
         int actual = service.countMonthInWhichSalesWasAboveAverage(sales);

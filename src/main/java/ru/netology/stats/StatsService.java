@@ -2,19 +2,19 @@ package ru.netology.stats;
 
 public class StatsService {
 
-    public int sumOfAllSales(int[] monthSales) {
-        int sum = 0;
-        for (int monthSale : monthSales) {
+    public long sumOfAllSales(long[] monthSales) {
+        long sum = 0;
+        for (long monthSale : monthSales) {
             sum += monthSale;
         }
         return sum;
     }
 
-    public double avgOfSumSalesInMonth(int[] monthSales) {
+    public double avgOfSumSalesInMonth(long[] monthSales) {
         return (double) sumOfAllSales(monthSales) / monthSales.length;
     }
 
-    public int numberMonthOfMaxSales(int[] monthSales) {
+    public int numberMonthOfMaxSales(long[] monthSales) {
         int numberMax = 0;
         for (int i = 0; i < monthSales.length; i++) {
             if (monthSales[i] >= monthSales[numberMax]) {
@@ -24,7 +24,7 @@ public class StatsService {
         return numberMax + 1;
     }
 
-    public int numberMonthOfMinSales(int[] monthSales) {
+    public int numberMonthOfMinSales(long[] monthSales) {
         int numberMin = 0;
         for (int i = 0; i < monthSales.length; i++) {
             if (monthSales[i] <= monthSales[numberMin]) {
@@ -34,19 +34,19 @@ public class StatsService {
         return numberMin + 1;
     }
 
-    public int countMonthInWhichSalesWasBelowAverage(int[] monthSales) {
+    public int countMonthInWhichSalesWasBelowAverage(long[] monthSales) {
         int count = 0;
         double avg = avgOfSumSalesInMonth(monthSales);
-        for (int monthSale : monthSales) {
+        for (long monthSale : monthSales) {
             if (monthSale < avg) { count++; }
         }
         return count;
     }
 
-    public int countMonthInWhichSalesWasAboveAverage(int[] monthSales) {
+    public int countMonthInWhichSalesWasAboveAverage(long[] monthSales) {
         int count = 0;
         double avg = avgOfSumSalesInMonth(monthSales);
-        for (int monthSale : monthSales) {
+        for (long monthSale : monthSales) {
             if (monthSale > avg) { count++; }
         }
         return count;
