@@ -1,6 +1,6 @@
 package ru.netology.services;
 
-public class MonthStatsService {
+public class StatsService {
 
     public int sumOfAllSales(int[] monthSales) {
         //TODO
